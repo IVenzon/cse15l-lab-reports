@@ -14,5 +14,9 @@ Once VScode is installed on your system, run it, and if everything went smoothly
 
 ## Step 2: How to remotely connect:
 
+Now that we have VScode installed, we can now remotely connect! This will be a very useful skill to know for future CSE courses as well as in the industry. However, before we begin, there are a few things you need to set up beforehand:
+
+1. **Install git (for Windows):** You can download git for Windows [here](https://gitforwindows.org/). 
+2. **Set up your course specific account:** 
 
 ## Step 3: Trying out some commands:
