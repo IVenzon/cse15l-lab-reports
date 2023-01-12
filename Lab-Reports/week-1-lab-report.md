@@ -1,6 +1,6 @@
 # CSE 15L Week 1 Lab Report
 
-*Ian Venzon - Thursday 12:00 PM - B270
+*Ian Venzon - Thursday 12:00 PM - B270*
 
 ## Step 1: How to install VScode:
 
