@@ -69,6 +69,6 @@ As we can see from our `ls`, there is a text file *hello.txt* within our current
 
 ![Image](https://i.imgur.com/72Aej4E.png)
 
-When you are done with your remote session, it is important to remember to log out. The `exit` command or simply inputing `Ctrl + D` will kill your session and log you out.
+When you are done with your remote session, it is important to remember to log out. The `exit` command or simply inputing `Ctrl + D` will kill your session and log you out of ieng6.
 
 ![Image](https://i.imgur.com/Eb0MwcR.png)
