@@ -34,8 +34,7 @@ Note that the $ is part of the terminal and you do not need to type it yourself.
 ⤇ ssh cs15lwi23___@ieng6.ucsd.edu
 The authenticity of host 'ieng6-202.ucsd.edu (128.54.70.227)' can't be established.
 RSA key fingerprint is SHA256:ksruYwhnYH+sySHnHAtLUHngrPEyZTDl/1x99wUQcec.
-Are you sure you want to continue connecting (yes/no/[fingerprint])? 
-Password: `
+Are you sure you want to continue connecting (yes/no/[fingerprint])?`
 
 Now enter the password you set earlier for your course account. Keep in mind that while you type your password you will not see any changes to the terminal window. Don't worry, this is the normal, intended behavior. Once you finish typing your password, just hit enter and you should see this message pop up.
 
