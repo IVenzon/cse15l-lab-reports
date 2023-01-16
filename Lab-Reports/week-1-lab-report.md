@@ -1,4 +1,4 @@
-# CSE 15L Week 1 Lab Report
+# CSE 15L Week 1 Lab Report: How to log in to ieng6
 
 *Ian Venzon - Thursday 12:00 PM - B270*
 
