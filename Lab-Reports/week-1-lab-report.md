@@ -28,5 +28,13 @@ First, type out the following command in your terminal.
 
 Note that the $ is part of the terminal and you do not need to type it yourself. You will also need to replace ___ with the letters at the end of your course account name (there can be two or three letters).
 
+If you get the message above, type 'yes' and then press enter.
+
+Now enter the password you set earlier for your course account. Keep in mind that while you type your password you will not see any changes to the terminal window. Don't worry, this is the normal, intended behavior. Once you finish typing your password, just hit enter and you should see this message pop up.
+
+Congrats, you're now connected remotely to a computer in the CSE basement! Any commands that you enter and run from now on will be executed on that computer.
+
 
 ## Step 3: Trying out some commands:
+
+Now that you're logged in remotely, you can start typing out some commands!
