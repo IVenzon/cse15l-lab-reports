@@ -62,3 +62,5 @@ Another useful command is `ls`. This command will list all the files in the curr
 In particular, the `ls -a` command will list all the files within the directory INCLUDING all hidden filetypes. In Linux, files which start with a '.' are considered hidden.
 
 ![Image](https://i.imgur.com/GSLVcVS.png)
+
+Notice how many more files are listed compared to just using the normal `ls`.
