@@ -48,3 +48,17 @@ Congrats, you're now connected remotely to a computer in the CSE basement! Any c
 ## Step 3: Trying out some commands:
 
 Now that you're logged in remotely, you can start typing out some commands!
+
+One useful command to keep yourself organized is `pwd`, which stands for *print working directory*. This command will display your current directory as an absolute path, starting from the root directory.
+
+![Image](https://i.imgur.com/nLGlOVO.png)
+
+As we can see, our directory starts in the root (/home) and ends at our account folder (which for me, is /cs15lwi23asn).
+
+Another useful command is `ls`. This command will list all the files in the current directory. 
+
+![Image](https://i.imgur.com/HLtXrGG.png)
+
+In particular, the `ls -a` command will list all the files within the directory INCLUDING all hidden filetypes. In Linux, files which start with a '.' are considered hidden.
+
+![Image](https://i.imgur.com/GSLVcVS.png)
