@@ -64,3 +64,5 @@ In particular, the `ls -a` command will list all the files within the directory 
 ![Image](https://i.imgur.com/GSLVcVS.png)
 
 Notice how many more files are listed compared to just using the normal `ls`.
+
+As we can see from our `ls`, there is a text file *hello.txt* within our current directory.
