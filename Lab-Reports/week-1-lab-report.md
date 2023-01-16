@@ -19,7 +19,7 @@ Now that we have VScode installed, we can now remotely connect! This will be a v
 1. **Install git (for Windows):** You can download git for Windows [here](https://gitforwindows.org/). 
 2. **Set up your course specific account:** Many CSE courses at UCSD have their own course specific account. You will first need to look up your account [here](https://sdacs.ucsd.edu/~icc/index.php). Follow the instructions carefully, and keep note of the username of your course account, as you will need to use it later.
 3. **Open up terminal:** There are many ways to use terminal, but in this tutorial I will use VScode to open the terminal. To do this, press 
-> *Shift + Ctrl + \`*
+> Shift + Ctrl + \`
 and it should open at the bottom of your VScode window.
 
 ## Step 3: Trying out some commands:
