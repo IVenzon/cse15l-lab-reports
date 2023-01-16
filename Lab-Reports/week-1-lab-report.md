@@ -20,7 +20,13 @@ Now that we have VScode installed, we can now remotely connect! This will be a v
 2. **Set up your course specific account:** Many CSE courses at UCSD have their own course specific account. You will first need to look up your account [here](https://sdacs.ucsd.edu/~icc/index.php). Follow the instructions carefully, and keep note of the username of your course account, as you will need to use it later.
 3. **Open up terminal:** There are many ways to use terminal, but in this tutorial I will use VScode to open the terminal. To do this, press Shift + Ctrl + \` and it should open at the bottom of your VScode window.
 
-If you followed those three steps correctly, you're now ready to remotely connect!
+If you followed those three steps correctly, you're now ready to remotely connect! This is the part where you'll need your course account name and password.
+
+First, type out the following command in your terminal.
+
+`$ ssh cs15lwi23___@ieng6.ucsd.edu`
+
+Note that the $ is part of the terminal and you do not need to type it yourself. You will also need to replace ___ with the letters at the end of your course account name (there can be two or three letters).
 
 
 ## Step 3: Trying out some commands:
