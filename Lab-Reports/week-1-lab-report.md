@@ -65,4 +65,6 @@ In particular, the `ls -a` command will list all the files within the directory 
 
 Notice how many more files are listed compared to just using the normal `ls`.
 
-As we can see from our `ls`, there is a text file *hello.txt* within our current directory.
+As we can see from our `ls`, there is a text file *hello.txt* within our current directory. If you wanted to know the contents of a .txt file, one command you can use is the `cat` command. The `cat` command will first check if the file you have chosen is valid. If it is, then it will print the contents of the file to the terminal. If no such file is found, then it will return an error.
+
+![Image](https://i.imgur.com/72Aej4E.png)
