@@ -28,6 +28,8 @@ First, type out the following command in your terminal.
 
 Note that the $ is part of the terminal and you do not need to type it yourself. You will also need to replace ___ with the letters at the end of your course account name (there can be two or three letters).
 
+![Image](https://i.imgur.com/9smKSyP.png)
+
 **NOTE:** If you get the following message (or something similar to it), type 'yes' and then press enter.
 
 `# On your client
@@ -37,6 +39,8 @@ RSA key fingerprint is SHA256:ksruYwhnYH+sySHnHAtLUHngrPEyZTDl/1x99wUQcec.
 Are you sure you want to continue connecting (yes/no/[fingerprint])?`
 
 Now enter the password you set earlier for your course account. Keep in mind that while you type your password you will not see any changes to the terminal window. Don't worry, this is the normal, intended behavior. Once you finish typing your password, just hit enter and you should see this message pop up.
+
+![Image](https://i.imgur.com/NUhqwO7.png)
 
 Congrats, you're now connected remotely to a computer in the CSE basement! Any commands that you enter and run from now on will be executed on that computer.
 
