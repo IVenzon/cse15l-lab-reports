@@ -8,3 +8,6 @@
 
 ![Image](https://i.imgur.com/hJK6XOe.png)
 
+### Running StringServer:
+
+![Image](https://i.imgur.com/ifWvWAM.png)
