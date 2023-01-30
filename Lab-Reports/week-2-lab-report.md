@@ -35,3 +35,12 @@
 #### Final Result:
 
 ![Image](https://i.imgur.com/8q57SgZ.png)
+
+---
+
+# Part 2: Bugs from Lab 3
+
+
+---
+
+# Part 3: Something I Learned
