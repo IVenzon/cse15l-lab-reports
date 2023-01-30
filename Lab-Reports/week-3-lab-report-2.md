@@ -2,7 +2,7 @@
 
 *Ian Venzon - Thursday 12:00 PM - B270*
 
-# Part 1: StringServer.java
+# -- Part 1: StringServer.java --
 
 ### StringServer.java code:
 
@@ -44,11 +44,11 @@ Let's add one more message for good measure. Note that since the `Handler` class
 
 ---
 
-# Part 2: Bugs from Lab 3
+# -- Part 2: Bugs from Lab 3 --
 
 The buggy method we will be looking for at this part of the lab report is `reverseInPlace(int arr[])` from `ArrayExamples.java`.
 
-**Here is an example of a failure-inducing input (JUnit test #1).**
+**Here is an example of a failure-inducing input (JUnit test #1):**
 
 ```
   @Test 
@@ -59,7 +59,7 @@ The buggy method we will be looking for at this part of the lab report is `rever
   }
 ```
 
-**Here is an example of an input that doesn't induce a failure (JUnit test #2).** 
+**Here is an example of an input that doesn't induce a failure (JUnit test #2):** 
 
 ```
   @Test 
@@ -76,7 +76,7 @@ The buggy method we will be looking for at this part of the lab report is `rever
 
 The expected array after calling `reverseInPlace()` is `{1, 2, 3, 4, 5}` but instead we get `{1, 2, 3, 2, 1}`.
 
-**Here is the result of running JUnit test #2 (failure-free input)**
+**Here is the result of running JUnit test #2 (failure-free input):**
 
 ![Image](https://i.imgur.com/mfyHxLR.png)
 
@@ -93,7 +93,7 @@ The expected array after calling `reverseInPlace()` is `{1, 1, 1}` and that is e
     }
   }
 ```
-**This is the code for the reverseInPlace() method after implementing my fix**
+**This is the code for the reverseInPlace() method after implementing my fix:**
 
 ```
   static void reverseInPlace(int[] arr) {
@@ -108,4 +108,6 @@ These changes fix the original bug of the index at the end of the array not bein
 
 ---
 
-# Part 3: Something I Learned
+# -- Part 3: Something I Learned --
+
+One thing I learned from lab in week 2/3 is how to use JUnit and the utility it provides for debugging. This was my first time using JUnit and its methods, but it certainly won't be the last, as it was extremely useful for checking bugs and symptoms. The documented failure messages displayed to the terminal made it a lot easier to decipher what was wrong in the buggy code, which in turn made it faster to spot the problematic implementation and try a different approach. Overall, JUnit is a great resource and I'm glad I learned about it.
