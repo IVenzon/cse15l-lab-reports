@@ -11,3 +11,27 @@
 ### Running StringServer:
 
 ![Image](https://i.imgur.com/ifWvWAM.png)
+
+#### Adding the first message ("Hello!"):
+
+![Image](https://i.imgur.com/lmqGV3S.png)
+
+#### Result after first message:
+
+![Image](https://i.imgur.com/ojw2Glu.png)
+
+#### Adding the second message ("Does this thing work?"):
+
+![Image](https://i.imgur.com/tbSwTDV.png)
+
+#### Result after second message:
+
+![Image](https://i.imgur.com/0jr4aR2.png)
+
+#### Adding the final message ("Looks like it does!"):
+
+![Image](https://i.imgur.com/wK7HlGA.png)
+
+#### Final Result:
+
+![Image](https://i.imgur.com/8q57SgZ.png)
