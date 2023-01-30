@@ -46,7 +46,15 @@ Let's add one more message for good measure. Note that since the `Handler` class
 
 # Part 2: Bugs from Lab 3
 
+The buggy method we will be looking for at this part of the lab report is `reverseInPlace(int arr[])` from `ArrayExamples.java`. In its bugged state, the method looks like the following:
 
+```
+  static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = arr[arr.length - i - 1];
+    }
+  }
+```
 ---
 
 # Part 3: Something I Learned
