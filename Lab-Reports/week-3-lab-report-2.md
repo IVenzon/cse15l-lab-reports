@@ -104,7 +104,7 @@ The expected array after calling `reverseInPlace()` is `{1, 1, 1}` and that is e
     }
   }
 ```
-These changes fix the original bug of the index at the end of the array not being changed. The for loop now only iterates for half of the array length, and a temporary variable stores the value at `arr[i]` before it is changed. This then allows for the element at `arr[arr.length - i - 1]` to be set to the value stored in the temporary variable. After the changes, the array is successfully reversed in place.
+These changes fix the original bug of the index at the end of the array not being changed. The for loop now only iterates for half of the array length, and a temporary variable stores the value at `arr[i]` before it is changed. This then allows for the element at `arr[arr.length - i - 1]` to be set to the value stored in the temporary variable. After the changes, the `reverseInPlace()` method is successfully reverses the array as intended.
 
 ---
 
