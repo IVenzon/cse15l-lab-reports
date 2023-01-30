@@ -46,15 +46,7 @@ Let's add one more message for good measure. Note that since the `Handler` class
 
 # Part 2: Bugs from Lab 3
 
-The buggy method we will be looking for at this part of the lab report is `reverseInPlace(int arr[])` from `ArrayExamples.java`. In its bugged state, the method looks like the following:
-
-```
-  static void reverseInPlace(int[] arr) {
-    for(int i = 0; i < arr.length; i += 1) {
-      arr[i] = arr[arr.length - i - 1];
-    }
-  }
-```
+The buggy method we will be looking for at this part of the lab report is `reverseInPlace(int arr[])` from `ArrayExamples.java`.
 
 **Here is an example of a failure-inducing input (JUnit test #1).**
 
@@ -91,6 +83,28 @@ The expected array after calling `reverseInPlace()` is `{1, 2, 3, 4, 5}` but ins
 The expected array after calling `reverseInPlace()` is `{1, 1, 1}` and that is exactly what is returned.
 
 *Note that this does not mean our method works correctly! As we can see in our other example input above, we have to make sure to thoroughly test our methods.*
+
+**This is the original, buggy code for the reverseInPlace() method prior to any changes:**
+
+```
+  static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < arr.length; i += 1) {
+      arr[i] = arr[arr.length - i - 1];
+    }
+  }
+```
+**This is the code for the reverseInPlace() method after implementing my fix**
+
+```
+  static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < arr.length / 2; i += 1) {
+      int temp = arr[i];
+      arr[i] = arr[arr.length - i - 1];
+      arr[arr.length - i - 1] = temp;
+    }
+  }
+```
+These changes fix the original bug of the index at the end of the array not being changed. The for loop now only iterates for half of the array length, and a temporary variable stores the value at `arr[i]` before it is changed. This then allows for the element at `arr[arr.length - i - 1]` to be set to the value stored in the temporary variable. After the changes, the array is successfully reversed in place.
 
 ---
 
