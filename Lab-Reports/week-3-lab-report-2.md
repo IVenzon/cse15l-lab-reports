@@ -81,6 +81,7 @@ Here is an example of an input that doesn't induce a failure.
 ```
 
 The expected array after calling `reverseInPlace()` is `{1, 1, 1}` and that is exactly what is returned.
+
 *Note that this does not mean our method works correctly! As we can see in our other example input above, we have to make sure to thoroughly test our methods.*
 
 ---
