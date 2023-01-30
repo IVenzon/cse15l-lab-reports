@@ -59,13 +59,12 @@ The buggy method we will be looking for at this part of the lab report is `rever
 Here is an example of a failure-inducing input.
 
 ```
-	@Test 
-	public void testReverseInPlace() {
+  @Test 
+  public void testReverseInPlace() {
     int[] input2 = {5, 4, 3, 2, 1};
     ArrayExamples.reverseInPlace(input2);
     assertArrayEquals(new int[]{1, 2, 3, 4, 5}, input2);
-	}
-
+  }
 ```
 
 The expected array after calling `reverseInPlace()` is `{1, 2, 3, 4, 5}` but instead we get `{1, 2, 3, 2, 1}`.
@@ -73,16 +72,16 @@ The expected array after calling `reverseInPlace()` is `{1, 2, 3, 4, 5}` but ins
 Here is an example of an input that doesn't induce a failure. 
 
 ```
-	@Test 
-	public void testReverseInPlace() {
+  @Test 
+  public void testReverseInPlace() {
     int[] input1 = {1, 1, 1};
     ArrayExamples.reverseInPlace(input1);
     assertArrayEquals(new int[]{1, 1, 1}, input1);
-	}
+  }
 ```
 
 The expected array after calling `reverseInPlace()` is `{1, 1, 1}` and that is exactly what is returned.
-*Note that this does not mean our method works correctly, as we can see in our other example input above.*
+*Note that this does not mean our method works correctly! As we can see in our other example input above, we have to make sure to thoroughly test our methods.*
 
 ---
 
