@@ -55,6 +55,9 @@ The buggy method we will be looking for at this part of the lab report is `rever
     }
   }
 ```
+
+Here is an example of a failure-inducing input. The expected array after calling `reverseInPlace()` is `{1, 2, 3, 4, 5}` but instead we get `{1, 2, 3, 2, 1}`.
+
 ---
 
 # Part 3: Something I Learned
