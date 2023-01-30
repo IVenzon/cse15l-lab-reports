@@ -56,7 +56,7 @@ The buggy method we will be looking for at this part of the lab report is `rever
   }
 ```
 
-Here is an example of a failure-inducing input.
+**Here is an example of a failure-inducing input (JUnit test #1).**
 
 ```
   @Test 
@@ -67,9 +67,7 @@ Here is an example of a failure-inducing input.
   }
 ```
 
-The expected array after calling `reverseInPlace()` is `{1, 2, 3, 4, 5}` but instead we get `{1, 2, 3, 2, 1}`.
-
-Here is an example of an input that doesn't induce a failure. 
+**Here is an example of an input that doesn't induce a failure (JUnit test #2).** 
 
 ```
   @Test 
@@ -79,6 +77,16 @@ Here is an example of an input that doesn't induce a failure.
     assertArrayEquals(new int[]{1, 1, 1}, input1);
   }
 ```
+
+**Here is the result of running JUnit test #1 (failure-inducing input)**
+
+![Image](https://i.imgur.com/PxxGqeO.png)
+
+The expected array after calling `reverseInPlace()` is `{1, 2, 3, 4, 5}` but instead we get `{1, 2, 3, 2, 1}`.
+
+**Here is the result of running JUnit test #2 (failure-free input)**
+
+![Image](https://i.imgur.com/mfyHxLR.png)
 
 The expected array after calling `reverseInPlace()` is `{1, 1, 1}` and that is exactly what is returned.
 
