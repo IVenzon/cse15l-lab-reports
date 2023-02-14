@@ -43,4 +43,21 @@ From our search, we can see that there are 179 .txt files within `./written_2`.
 
 ## Command line option #3: `-i`
 
+One limitation of the `grep` command is that it only searches for and returns exact matches. Consider the following situation: Say I wanted to count the number of times the word "physics" appears in **ANY form** within `./written_2/non-fiction/OUP/Kauffman`? I could use the following command to try and find out:
+
+![Image](https://i.imgur.com/FJIUdoL.png)
+
+However, this doesn't account for any occurences of "physics" with a capital P ("Physics"). I could find all instances of "Physics" with the following:
+
+![Image](https://i.imgur.com/zDbTdAg.png)
+
+As we can see, our first search missed one instance within `ch5.txt`! We could add up the values from each search, but this doesn't seem very efficient. A more elegant solution is the `-i` command line option. `-i` will make our search *case insensitive*, which allows us to do our original search in a single line.
+
+```
+grep -c -i "PHYSICS" written_2/non-fiction/OUP/Kauffman/*.txt
+```
+![Image](https://i.imgur.com/cfTHYjP.png)
+
+Now both the "physics" and "Physics" within `ch5.txt` are counted in our search.
+
 ## Command line option #4: `-r`
