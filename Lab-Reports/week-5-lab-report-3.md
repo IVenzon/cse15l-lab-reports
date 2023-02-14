@@ -24,6 +24,8 @@ grep -l "vista" written_2/travel_guides/berlitz1/*.txt
 
 ![Image](https://i.imgur.com/3vqe1eN.png)
 
+Using `grep` and `-l` like could be useful if you had all of your notes in a single directory and wanted to search for specific key phrases/concepts, as it would give you a specific list of which files have the content you want to study.
+
 Source: [15 Practical Grep Command Examples In Linux / UNIX](https://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/)
 
 However, the `-l` option has its limits. If we only want to search through one file, it can't really tell us much. In this example, `find-results.txt` contains the results of running `$ find written_2` in the terminal. If we wanted to, we could use `-l` in the following way to check to see if `find-results.txt` has certain words or phrases within it.
@@ -51,6 +53,8 @@ grep -c ".txt" find-results.txt
 
 From our search, we can see that there are 179 .txt files within `./written_2`.
 
+`-c` is useful in situations where we are parsing through a large amount of data and all we care about is the frequency of a certain result. Imagine trying to count 179 .txt files by hand!
+
 Source: [15 Practical Grep Command Examples In Linux / UNIX](https://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/)
 
 The `-c` command can also apply to multiple files in a single search. If multiple files are searched, `grep` will first list out the name of the file and then list the number of search matches within said file. This can be seen below, where `-c` was used to find the number of times "architect" appears within `./written_2/non-fiction/OUP/Rybczynski`.
@@ -59,6 +63,8 @@ The `-c` command can also apply to multiple files in a single search. If multipl
 grep -c "architect" written_2/non-fiction/OUP/Rybcynzski/*.txt
 ```
 ![Image](https://i.imgur.com/pw0NxMP.png)
+
+Using `-c` in this way could be useful in trying to analyze certain speech/writing habits within a text. For example, if you had the transcribed speeches of 30 different people, you could use `-c` to find out how many times they use filler words such as "um".
 
 Source: [15 Practical Grep Command Examples In Linux / UNIX](https://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/)
 
@@ -79,7 +85,7 @@ grep -c -i "PHYSICS" written_2/non-fiction/OUP/Kauffman/*.txt
 ```
 ![Image](https://i.imgur.com/cfTHYjP.png)
 
-Now both the "physics" and "Physics" within `ch5.txt` are counted in our search.
+Now both the "physics" and "Physics" within `ch5.txt` are counted in our search. Make sure to use `-i` if you want to catch **EVERY** instance of your search phrase, as just regular `grep` might not catch everything.
 
 Source: [15 Practical Grep Command Examples In Linux / UNIX](https://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/)
 
@@ -126,5 +132,7 @@ grep -r -i -l "SIMPLY" written_2/non-fiction/
 ```
 
 ![Image](https://i.imgur.com/zlNUOAY.png)
+
+All in all, the `-r` command makes using `grep` a lot easier on us. Instead of having to use `grep` multiple times for each directory, we can simply use `-r` and let recursive `grep` do all the work for us.
 
 Source: [15 Practical Grep Command Examples In Linux / UNIX](https://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/)
