@@ -24,11 +24,15 @@ grep -l "vista" written_2/travel_guides/berlitz1/*.txt
 
 ![Image](https://i.imgur.com/3vqe1eN.png)
 
+Source: [15 Practical Grep Command Examples In Linux / UNIX](https://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/)
+
 However, the `-l` option has its limits. If we only want to search through one file, it can't really tell us much. In this example, `find-results.txt` contains the results of running `$ find written_2` in the terminal. If we wanted to, we could use `-l` in the following way to check to see if `find-results.txt` has certain words or phrases within it.
 
 ![Image](https://i.imgur.com/N5pPEp8.png)
 
 As you can see though, the viability of this is limited, as `-l` will simply return the file name which we are searching through if a match has been found, or nothing if a match was not found.
+
+Source: [15 Practical Grep Command Examples In Linux / UNIX](https://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/)
 
 ## Command line option #2: `-c`
 
@@ -67,6 +71,8 @@ grep -c -i "PHYSICS" written_2/non-fiction/OUP/Kauffman/*.txt
 
 Now both the "physics" and "Physics" within `ch5.txt` are counted in our search.
 
+Source: [15 Practical Grep Command Examples In Linux / UNIX](https://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/)
+
 ## Command line option #4: `-r`
 
 Another big limitation of `grep` is that we can only use it on files. Attempting to use `grep` on a directory simply results in an error.
@@ -84,6 +90,8 @@ grep -l -r "vista" written_2/travel_guides/
 
 Here we see that there are 20 files in total that contain the word "vista", 10 being the ones we found within `/berlitz1` from our original search, and an additional 10 files which were within `/berlitz2`.
 
+Source: [15 Practical Grep Command Examples In Linux / UNIX](https://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/)
+
 The `-r` command is also very useful in combination with other commands. Here, the `-i` and `-l` commands are used in conjunction with `r` to find all of the files which contain some variation of the word "simply" within `./written_2/non-fiction`.
 
 ```
@@ -91,3 +99,5 @@ grep -r -i -l "SIMPLY" written_2/non-fiction/
 ```
 
 ![Image](https://i.imgur.com/zlNUOAY.png)
+
+Source: [15 Practical Grep Command Examples In Linux / UNIX](https://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/)
