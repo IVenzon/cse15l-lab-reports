@@ -51,12 +51,16 @@ grep -c ".txt" find-results.txt
 
 From our search, we can see that there are 179 .txt files within `./written_2`.
 
+Source: [15 Practical Grep Command Examples In Linux / UNIX](https://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/)
+
 The `-c` command can also apply to multiple files in a single search. If multiple files are searched, `grep` will first list out the name of the file and then list the number of search matches within said file. This can be seen below, where `-c` was used to find the number of times "architect" appears within `./written_2/non-fiction/OUP/Rybczynski`.
 
 ```
 grep -c "architect" written_2/non-fiction/OUP/Rybcynzski/*.txt
 ```
 ![Image](https://i.imgur.com/pw0NxMP.png)
+
+Source: [15 Practical Grep Command Examples In Linux / UNIX](https://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/)
 
 ## Command line option #3: `-i`
 
@@ -92,7 +96,7 @@ grep -iw -c "is" written_2/non-fiction/OUP/Fletcher/ch2.txt
 ```
 ![Image](https://i.imgur.com/RpwQIFf.png)
 
-In total, using just `-i` gave us 35 false positives! This is why it is important to keep in mind what exactly you are searching. If you are searching for something very specific or long, then `-i` should be just fine. However, if you are searching for something very small or you know it is a common prefix/suffix/substring for other words, consider using `-iw` to get a more accurate result.
+In total, using just `-i` gave us 35 false positives! This is why it is important to keep in mind what exactly you are searching. If you are searching for something very specific or long, then `-i` should be just fine. If you are searching for something very small or you know it is a common prefix/suffix/substring for other words, consider using `-iw` to get a more accurate result.
 
 Source: [15 Practical Grep Command Examples In Linux / UNIX](https://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/)
 
