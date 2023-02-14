@@ -29,9 +29,9 @@ Source: [15 Practical Grep Command Examples In Linux / UNIX](https://www.thegeek
 However, the `-l` option has its limits. If we only want to search through one file, it can't really tell us much. In this example, `find-results.txt` contains the results of running `$ find written_2` in the terminal. If we wanted to, we could use `-l` in the following way to check to see if `find-results.txt` has certain words or phrases within it.
 
 ```
-grep -l "travel" find-results.txt    //should return something!
+grep -l "travel" find-results.txt             //should return something!
 
-grep -l "nothing!" find-results.txt  //should return nothing!
+grep -l "nothing!" find-results.txt           //should return nothing!
 ```
 
 ![Image](https://i.imgur.com/N5pPEp8.png)
