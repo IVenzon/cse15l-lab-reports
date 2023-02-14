@@ -55,4 +55,6 @@ sed -n 5,10p find-results.txt
 ```
 ![Image](https://i.imgur.com/UbUDLoz.png)
 
-To explain, the `-n` option suppresses the default output behavior of `sed` and makes it so only explicit print statements will go through. Then, the `5,10p` portion states which lines to print, being 5-10. (Source/Idea: [Linux Commando: Using sed to extract lines in a text file](https://linuxcommando.blogspot.com/2008/03/using-sed-to-extract-lines-in-text-file.html)
+To explain, the `-n` option suppresses the default output behavior of `sed` and makes it so only explicit print statements will go through. Then, the `5,10p` portion states which lines to print, being 5-10. (Source/Idea: [Linux Commando: Using sed to extract lines in a text file](https://linuxcommando.blogspot.com/2008/03/using-sed-to-extract-lines-in-text-file.html))
+
+
