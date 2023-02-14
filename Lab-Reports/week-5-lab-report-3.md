@@ -37,4 +37,4 @@ Another useful command line option for `grep` is `-c`, which counts the number o
 ```
 grep -c ".txt" find-results.txt
 ```
-![Image](https://i.imgur.com/N5pPEp8.png)
+![Image](https://i.imgur.com/B2XIrtW.png)
