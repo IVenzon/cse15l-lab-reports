@@ -61,3 +61,9 @@ grep -c -i "PHYSICS" written_2/non-fiction/OUP/Kauffman/*.txt
 Now both the "physics" and "Physics" within `ch5.txt` are counted in our search.
 
 ## Command line option #4: `-r`
+
+Another big limitation of `grep` is that we can only use it on files. Attempting to use `grep` on a directory simply results in an error.
+
+![Image](https://i.imgur.com/ytF9rAb.png)
+
+This is not a big deal if we only need to look through a single directory, but what if we wanted to search through multiple? This is where the `-r` command line option comes in.
