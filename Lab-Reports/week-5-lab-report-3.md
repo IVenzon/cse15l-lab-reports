@@ -13,3 +13,5 @@ grep [options] pattern [files]
 Source: [GeeksForGeeks: grep command in Unix/Linux](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
 
 There are a lot of different command line options for `grep` that can give us specific results. This is what we will be exploring in this lab report.
+
+## Command line option #1: -l
