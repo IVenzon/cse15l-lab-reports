@@ -66,4 +66,11 @@ Another big limitation of `grep` is that we can only use it on files. Attempting
 
 ![Image](https://i.imgur.com/ytF9rAb.png)
 
-This is not a big deal if we only need to look through a single directory, but what if we wanted to search through multiple? This is where the `-r` command line option comes in.
+This is not a big deal if we only need to look through a single directory, but what if we wanted to search through multiple? This is where the `-r` command line option comes in. The `-r` command line option turns our search into a *recursive search*. This means that our search will look through the given directory and all of its subdirectories too.
+
+Let's look back to one of the earlier examples where we searched for all files which contained "vista" within `./written_2/travel_guides/berlitz1/`. What if we wanted to find all occurences of "vista" within the `/travel_guides` directory as a whole? To do so, we could use `-r` like so:
+
+```
+grep -l -r "vista" written_2/travel_guides/
+```
+![Image](https://i.imgur.com/dvwU2FC.png)
