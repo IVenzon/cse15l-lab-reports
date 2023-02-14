@@ -21,6 +21,8 @@ The `awk` command is another useful way we can search through files/directories 
 ```
 awk [options] 'pattern {action}' [input-file] > [output-file]
 ```
+Source: [GeeksForGeeks: AWK command in Unix/Linux](https://www.geeksforgeeks.org/awk-command-unixlinux-examples/)
+
 With `awk`, we can actually specify what action we want to do. To achieve a similar result as `grep`, we should use the `print` action. For instance, if we wanted to search for all of the .txt files within `./written_2` (where `find-results.txt` contains all of the files/directories within `./written_2`) that contain the word "Italy", we could use `awk` in the following way:
 
 ```
