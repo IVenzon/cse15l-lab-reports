@@ -14,4 +14,4 @@ Source: [GeeksForGeeks: grep command in Unix/Linux](https://www.geeksforgeeks.or
 
 There are a lot of different command line options for `grep` that can give us specific results. This is what we will be exploring in this lab report.
 
-## Command line option #1: -l
+## Command line option #1: `-l`:
