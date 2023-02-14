@@ -12,4 +12,4 @@ grep [options] pattern [files]
 
 Source: [GeeksForGeeks: grep command in Unix/Linux](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
 
-However, there are alternative commands to `grep` that can give us similar results. This is what we will be exploring in this lab report.
+There are a lot of different command line options for `grep` that can give us specific results. This is what we will be exploring in this lab report.
