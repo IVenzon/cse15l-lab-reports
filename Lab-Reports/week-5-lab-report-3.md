@@ -38,3 +38,9 @@ Another useful command line option for `grep` is `-c`, which counts the number o
 grep -c ".txt" find-results.txt
 ```
 ![Image](https://i.imgur.com/B2XIrtW.png)
+
+From our search, we can see that there are 179 .txt files within `./written_2`.
+
+## Command line option #3: `-i`
+
+## Command line option #4: `-r`
