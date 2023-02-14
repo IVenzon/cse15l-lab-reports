@@ -77,7 +77,7 @@ grep -l -r "vista" written_2/travel_guides/
 
 Here we see that there are 20 files in total that contain the word "vista", 10 being the ones we found within `/berlitz1` from our original search, and an additional 10 files which were within `/berlitz2`.
 
-The `-r` command is also very useful in combination with other commands.
+The `-r` command is also very useful in combination with other commands. Here, the `-i` and `-l` commands are used in conjunction with `r` to find all of the files which contain some variation of the word "simply" within `./written_2/non-fiction`.
 
 ```
 grep -r -i -l "SIMPLY" written_2/non-fiction/
