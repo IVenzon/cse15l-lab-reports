@@ -38,3 +38,21 @@ awk '/vista/ {print}' written_2/travel_guides/berlitz1/*.txt
 ![Image](https://i.imgur.com/jDmmPZQ.png)
 
 From our search with `awk`, we can see that there are 16 lines within the `/berlitz1/` directory that contain "vista".
+
+## Alternative #2: The Sed command:
+
+The `sed` command in Linux stands for "stream editor" and can be used in a manner similar to `grep`. However, it can be used in more specialized ways than `grep`, which gives it an edge in certian use cases. The syntax for `sed` is as follows:
+
+```
+sed [options]... [script] [input-file...]
+```
+Source: [GeeksForGeeks: Sed command in Unix/Linux](https://www.geeksforgeeks.org/sed-command-in-linux-unix-with-examples/)
+
+For example, what if I wanted to search for lines 5-10 of a given file (in this case, `find-results.txt`. I'd have no real way to approach this with `grep`, but with `sed`, it's as easy as the following:
+
+```
+sed -n 5,10p find-results.txt
+```
+![Image](https://i.imgur.com/UbUDLoz.png)
+
+To explain, the `-n` option suppresses the default output behavior of `sed` and makes it so only explicit print statements will go through. Then, the `5,10p` portion states which lines to print, being 5-10. (Source/Idea: [Linux Commando: Using sed to extract lines in a text file](https://linuxcommando.blogspot.com/2008/03/using-sed-to-extract-lines-in-text-file.html)
