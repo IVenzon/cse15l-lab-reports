@@ -41,6 +41,13 @@ grep -c ".txt" find-results.txt
 
 From our search, we can see that there are 179 .txt files within `./written_2`.
 
+The `-c` command can also apply to multiple files in a single search. If multiple files are searched, `grep` will first list out the name of the file and then list the number of search matches within said file. This can be seen below, where `-c` was used to find the number of times "architect" appears within `./written_2/non-fiction/OUP/Rybczynski`.
+
+```
+grep -c "architect" written_2/non-fiction/OUP/Rybcynzski/*.txt
+```
+![Image](https://i.imgur.com/pw0NxMP.png)
+
 ## Command line option #3: `-i`
 
 One limitation of the `grep` command is that it only searches for and returns exact matches. Consider the following situation: Say I wanted to count the number of times the word "physics" appears in **ANY form** within `./written_2/non-fiction/OUP/Kauffman`? I could use the following command to try and find out:
