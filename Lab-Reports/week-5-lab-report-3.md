@@ -14,4 +14,12 @@ Source: [GeeksForGeeks: grep command in Unix/Linux](https://www.geeksforgeeks.or
 
 There are a lot of different command line options for `grep` that can give us specific results. This is what we will be exploring in this lab report.
 
-## Command line option #1: `-l`:
+## Command line option #1: `-l`
+
+If all we are interested in our search is the exact number of files that contain our desired pattern, then the `-l` command line option is very useful. The `-l` command makes it so `grep` only return the names of the files that match our search. For example, if I wanted to find how many files within the `./written_2/travel_guides/berlitz1/` directory contained the word "vista", I could use `-l` as such:
+
+```
+grep -l "vista" written_2/travel_guides/berlitz1/*.txt
+```
+
+![Image](https://i.imgur.com/3vqe1eN.png)
