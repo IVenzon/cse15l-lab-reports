@@ -29,3 +29,12 @@ With `awk`, we can actually specify what action we want to do. To achieve a simi
 awk '/Italy/ {print}' find-results.txt
 ```
 ![Image](https://i.imgur.com/XLnIiPn.png)
+
+`awk` can also be used to search for specific words/phrases within a .txt file. If we wanted to search for all the lines within the `./written_2/travel_guides/berlitz1/` directory that contain the word "vista", we would use `awk` as such:
+
+```
+awk '/vista/ {print}' written_2/travel_guides/berlitz1/*.txt
+```
+![Image](https://i.imgur.com/jDmmPZQ.png)
+
+From our search with `awk`, we can see that there are 16 lines within the `/berlitz1/` directory that contain "vista".
