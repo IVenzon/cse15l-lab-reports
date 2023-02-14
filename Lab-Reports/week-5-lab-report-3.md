@@ -74,3 +74,13 @@ Let's look back to one of the earlier examples where we searched for all files w
 grep -l -r "vista" written_2/travel_guides/
 ```
 ![Image](https://i.imgur.com/dvwU2FC.png)
+
+Here we see that there are 20 files in total that contain the word "vista", 10 being the ones we found within `/berlitz1` from our original search, and an additional 10 files which were within `/berlitz2`.
+
+The `-r` command is also very useful in combination with other commands.
+
+```
+grep -r -i -l "SIMPLY" written_2/non-fiction/
+```
+
+![Image](https://i.imgur.com/zlNUOAY.png)
