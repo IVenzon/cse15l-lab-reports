@@ -79,6 +79,23 @@ Now both the "physics" and "Physics" within `ch5.txt` are counted in our search.
 
 Source: [15 Practical Grep Command Examples In Linux / UNIX](https://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/)
 
+However, whenever we use `-i`, we need to be careful. By default, `grep` will also return a match if the search pattern is a *substring* within a word. If I used `grep -i "rot"` to try and find all instances of the word "rot", I would get a false positive if the file contained the word "carrot", as "rot" is a substring within "carrot". We can fix this by simply changing `-i` to `-iw`, which makes it so our search will only return matches for the specified word.
+
+Here, I am using just `-i` to search `./written_2/non-fiction/OUP/Fletcher/ch2.txt` for the word "is". 
+
+![Image](https://i.imgur.com/QPBXFmw.png)
+
+Now, I am doing the exact same search, but using `-iw` to make sure we only catch instances of "is" and no words where "is" is a substring.
+
+```
+grep -iw -c "is" written_2/non-fiction/OUP/Fletcher/ch2.txt
+```
+![Image](https://i.imgur.com/RpwQIFf.png)
+
+In total, using just `-i` gave us 35 false positives! This is why it is important to keep in mind what exactly you are searching. If you are searching for something very specific or long, then `-i` should be just fine. However, if you are searching for something very small or you know it is a common prefix/suffix/substring for other words, consider using `-iw` to get a more accurate result.
+
+Source: [15 Practical Grep Command Examples In Linux / UNIX](https://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/)
+
 ## Command line option #4: `-r`
 
 Another big limitation of `grep` is that we can only use it on files. Attempting to use `grep` on a directory simply results in an error.
