@@ -29,3 +29,12 @@ However, the `-l` option has its limits. If we only want to search through one f
 ![Image](https://i.imgur.com/N5pPEp8.png)
 
 As you can see though, the viability of this is limited, as `-l` will simply return the file name which we are searching through if a match has been found, or nothing if a match was not found.
+
+## Command line option #2: `-c`
+
+Another useful command line option for `grep` is `-c`, which counts the number of search matches within a specified file. Using the same `find-results.txt` file from before, we can use `-c` to count the number of .txt files within `./written_2`. This is useful, because the `find` command will also return directories, which aren't what we are looking for in this case.
+
+```
+grep -c ".txt" find-results.txt
+```
+![Image](https://i.imgur.com/N5pPEp8.png)
