@@ -23,3 +23,9 @@ While these tasks are fairly straightforward, there are lots of ways to optimize
 The first three steps are the same for every person, so I won't really go in depth here. For step 1, if you can't find where to delete your fork of the repository, first go to your fork of the repo and click the "Settings" tab. Scroll all the way to the bottom of the page, and then click the "Delete this repository" button.
 
 ![Image](https://i.imgur.com/8QUaftB.png)
+
+### Step 4: Log into ieng6
+
+![Image](https://i.imgur.com/mSLyiPN.png)
+
+For this step, I typed out `ssh cs15lwi23asn@ieng6.ucsd.edu` and then hit `<enter>`
