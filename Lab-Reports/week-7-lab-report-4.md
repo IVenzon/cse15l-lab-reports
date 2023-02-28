@@ -32,11 +32,11 @@ For this step, I typed out `ssh cs15lwi23asn@ieng6.ucsd.edu` and then hit `<ente
 
 ### Step 5: Clone the fork of the repository
 
-![Image](https://i.imgur.com/6oUeoRh.png)
+![Image](https://i.imgur.com/9h4AxG7.png)
 
 For this step, I typed out `git clone `, pressed `ctrl + V` to copy the link to my forked repo, then finally hit `<enter>`.
 
-### Step 6: Run the tests for the first time
+### Step 6: Run the tests for the first time (failure expected)
 
 ![Image](https://i.imgur.com/bF05mlc.png)
 
@@ -67,3 +67,15 @@ First, I typed `nano L` then hit `<tab>` to autocomplete and hit `<enter>`.
 Next, I entered `ctrl + O` then hit `<enter>`.
 
 Then, I pressed the `<down>` arrow until it was on the line I wanted, then I pressed the `<right>` arrow until it was at the position seen in the third image.
+
+After this, I pressed `<backspace>` and then `2` to implement the fix. After this I entered `ctrl + X` and then `Y` to save my changes, then hit `<enter>` a final time to save my changes.
+
+### Step 8: Run the tests for the second time (should now all pass)
+
+![Image](https://i.imgur.com/6ze55KL.png)
+
+For this step, I only pressed the arrow keys in the following way:
+
+For the first line, the `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java` command was 2 up in the history, so I entered `<up> <up>` and then `<enter>`.
+
+For the second line, the `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests` command was 4 up in the history, so I entered `<up> <up> <up> <up>` followed by `<enter>` to run the tests once again.
