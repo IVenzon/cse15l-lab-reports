@@ -78,4 +78,24 @@ For this step, I only pressed the arrow keys in the following way:
 
 For the first line, the `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java` command was 2 up in the history, so I entered `<up> <up>` and then `<enter>`.
 
-For the second line, the `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests` command was 4 up in the history, so I entered `<up> <up> <up> <up>` followed by `<enter>` to run the tests once again.
+For the second line, the `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests` command was 3 up in the history, so I entered `<up> <up> <up> <up>` followed by `<enter>` to run the tests once again.
+
+### Step 9: Commit and push the changes made to GitHub
+
+![Image](https://i.imgur.com/BK3mtBb.png)
+
+For this last step, I did the following:
+
+First, I typed `git add L` then hit `<tab>` to autocomplete, then typed `.java` and hit `<enter>`.
+
+Then, I typed `git commit -m "Fixed the bug"`.
+
+Lastly, I typed `git push` to push my changes to my forked repository. Now if I look at my fork, the changes I made through the terminal show up!
+
+#### Here is my commit message:
+![Image](https://i.imgur.com/X9KOSnX.png)
+
+#### And here is the code after I pushed the fixes:
+![Image](https://i.imgur.com/B8Ex26R.png)
+
+Obviously, there are much, much faster ways to execute these nine tasks. However, when I tried pushing for a faster time I kept on making errors that ended up costing me time instead. The steps that I have laid out in this lab report gave me the best balance between speed and accuracy out of all of my attempts.
