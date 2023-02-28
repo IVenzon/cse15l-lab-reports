@@ -43,5 +43,7 @@ For this step, I typed out `git clone `, pressed `ctrl + V` to copy the link to 
 This step is a little more involved, so I will break it down line by line.
 
 The first thing I typed was `cd la`, then I pressed `<tab>` to autocomplete and then pressed `<enter>`.
+
 Next, I entered `ctrl + R` and typed `javac` until it found `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java` from my history, then I pressed `<enter>`.
+
 Lastly, I entered `ctrl + R` once again and typed `j`. This time it immediately found `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests` and I hit `<enter>` to run the tests.
