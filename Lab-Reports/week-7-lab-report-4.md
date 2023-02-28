@@ -47,3 +47,14 @@ The first thing I typed was `cd la`, then I pressed `<tab>` to autocomplete and 
 Next, I entered `ctrl + R` and typed `javac` until it found `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java` from my history, then I pressed `<enter>`.
 
 Lastly, I entered `ctrl + R` once again and typed `j`. This time it immediately found `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests` and I hit `<enter>` to run the tests.
+
+### Step 7: Edit the code to fix the problem
+
+![Image](https://i.imgur.com/XJ5Wnt1.png)
+![Image](https://i.imgur.com/MKDmfwn.png)
+
+#### Before:
+![Image](https://i.imgur.com/beRCaxB.png)
+
+#### After:
+![Image](https://i.imgur.com/6gFgWgW.png)
