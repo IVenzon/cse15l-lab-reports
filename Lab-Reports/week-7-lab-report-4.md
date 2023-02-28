@@ -59,3 +59,11 @@ Lastly, I entered `ctrl + R` once again and typed `j`. This time it immediately 
 
 #### After:
 ![Image](https://i.imgur.com/6gFgWgW.png)
+
+This is the most complex step of the entire process, so once again I will break it down line by line.
+
+First, I typed `nano L` then hit `<tab>` to autocomplete and hit `<enter>`.
+
+Next, I entered `ctrl + O` then hit `<enter>`.
+
+Then, I pressed the `<down>` arrow until it was on the line I wanted, then I pressed the `<right>` arrow until it was at the position seen in the third image.
