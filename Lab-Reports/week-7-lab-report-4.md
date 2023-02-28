@@ -51,6 +51,7 @@ Lastly, I entered `ctrl + R` once again and typed `j`. This time it immediately 
 ### Step 7: Edit the code to fix the problem
 
 ![Image](https://i.imgur.com/XJ5Wnt1.png)
+
 ![Image](https://i.imgur.com/MKDmfwn.png)
 
 #### Before:
