@@ -28,4 +28,20 @@ The first three steps are the same for every person, so I won't really go in dep
 
 ![Image](https://i.imgur.com/mSLyiPN.png)
 
-For this step, I typed out `ssh cs15lwi23asn@ieng6.ucsd.edu` and then hit `<enter>`
+For this step, I typed out `ssh cs15lwi23asn@ieng6.ucsd.edu` and then hit `<enter>`. Not much more to this step.
+
+### Step 5: Clone the fork of the repository
+
+![Image](https://i.imgur.com/6oUeoRh.png)
+
+For this step, I typed out `git clone `, pressed `ctrl + V` to copy the link to my forked repo, then finally hit `<enter>`.
+
+### Step 6: Run the tests for the first time
+
+![Image](https://i.imgur.com/bF05mlc.png)
+
+This step is a little more involved, so I will break it down line by line.
+
+The first thing I typed was `cd la`, then I pressed `<tab>` to autocomplete and then pressed `<enter>`.
+Next, I entered `ctrl + R` and typed `javac` until it found `javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java` from my history, then I pressed `<enter>`.
+Lastly, I entered `ctrl + R` once again and typed `j`. This time it immediately found `java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests` and I hit `<enter>` to run the tests.
