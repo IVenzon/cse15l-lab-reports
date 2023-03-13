@@ -9,8 +9,11 @@ For this lab report, we will be covering `grade.sh`, a simple bash script that t
 Here is the entirety of `grade.sh`. At the moment it is configured for a Windows machine, but it can be converted for Mac/Linux very easily.
 
 ```
+
 # CPATH='.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar' # uncomment this line and comment the line below if on Mac
 CPATH=".;lib/hamcrest-core-1.3.jar;lib/junit-4.13.2.jar"
+
+# PART 1: CLONING AND CHECKING FOR CORRECT FILES
 
 rm -rf student-submission
 git clone $1 student-submission
@@ -26,6 +29,9 @@ else
     exit
 fi
 
+
+# PART 2: SETTING UP FILES FOR TESTING
+
 cp ListExamples.java ..
 cd ..
 
@@ -38,6 +44,10 @@ cp ListExamples.java testing-folder
 cp -r lib testing-folder
 
 echo 'Files ready for testing'
+
+# PART 3: COMPILING STUDENT SUBMISSION
+
+rm -rf compile-result.txt
 
 javac -cp $CPATH ./testing-folder/*.java 2> compile-result.txt
 
@@ -52,8 +62,11 @@ else
     exit
 fi
 
+# PART 4: RUNNING STUDENT SUBMISSION
 
 cd testing-folder
+
+rm -rf compile-result.txt
 
 # java -cp $CPATH org.junit.runner.JUnitCore ./testing-folder/TestListExamples > run-result.txt
 java -cp ".;lib/junit-4.13.2.jar;lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore TestListExamples > run-result.txt
