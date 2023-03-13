@@ -162,3 +162,90 @@ cp -r lib testing-folder
 
 echo 'Files ready for testing'
 ```
+All we are doing in this part of the script is copying/moving around files for organizational purposes. First, we copy `ListExamples.java` into the parent directory, then `cd` into the parent directory. Then, we create the directory `testing-folder` to store all the files we need to compile/run the program. We then copy `TestListExamples.java`, `ListExamples.java`, and the `/lib` directory into `testing-folder`. These are all the files we need in order to compile the program and run the JUnit tests in parts 3 and 4 respectively.
+
+## Part 3: Compiling Student Submission
+
+```
+#--------------------------------------------------
+# PART 3: COMPILING STUDENT SUBMISSION
+#--------------------------------------------------
+
+rm -rf compile-result.txt
+
+javac -cp $CPATH ./testing-folder/*.java 2> compile-result.txt
+
+X=$?
+
+if [[ $X -eq 0 ]]
+then
+    echo 'Compiled successfully'
+else
+    echo 'Errors were found while compiling'
+    echo 'Error code is: ' $X
+    exit
+fi
+```
+
+This part of the script is where we compile the student's submission. First, we redirect the output of running `javac` into `compile-result.txt`. We then store the exit status of running `javac` into a variable `X`. `X` is used within our if/else statement to check whether or not we were able to compile the student submission successfully. If `X` holds any value other than 0, we know something went wrong while compiling, so we tell the user that there was a problem and exit the script. If everything compiled successfully, we move on to part 4.
+
+
+## Part 4: Running Student Submission
+
+```
+#--------------------------------------------------
+# PART 4: RUNNING STUDENT SUBMISSION
+#--------------------------------------------------
+
+cd testing-folder
+
+rm -rf compile-result.txt
+
+# java -cp $CPATH org.junit.runner.JUnitCore ./testing-folder/TestListExamples > run-result.txt
+java -cp ".;lib/junit-4.13.2.jar;lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore TestListExamples > run-result.txt
+
+cp run-result.txt ..
+
+cd ..
+
+X=$?
+
+if [[ $X -eq 0 ]]
+then
+    echo 'Ran successfully'
+else
+    echo 'Errors were found while running'
+    echo 'Error code is: ' $X
+    exit
+fi
+```
+
+Now that everything is compiled, we can move on to the next part of the script, which is running the code/JUnit tests. We first `cd` into `testing-folder`, as it contains all the files we need. We then redirect the output of running `java` into `run-result.txt` and copy `run-result.txt` into the parent directory. Just like in part 3, we also store the exit code of `java` into `X`. Much like earlier, if `X` contains a value other than 0, we know that an error was found while running the code, so we tell the user and exit. If the program was able to run successfully, we move on to part 5.
+
+## Part 5: Grading Student Submission
+
+```
+#--------------------------------------------------
+# PART 5: GRADING STUDENT SUBMISSION
+#--------------------------------------------------
+
+rm -rf failures.txt 
+
+grep -c -i "FAILURES" run-result.txt > failures.txt
+
+
+FAILS=`grep -c -i "FAILURES" run-result.txt`
+
+echo "-----"
+
+if [[ $FAILS -eq 0 ]]
+then
+    echo "You passed!"
+else
+    echo "We found an error, so you fail!"
+fi
+```
+
+Now, in the final part of the script, we assign the student's submission a grade based on the results of the JUnit tests. We first use `grep` in combination with the `-i` and `-c` options to find any and all instances of the word "FAILURES" within `run-result.txt` and store it in a variable called `FAILS`. `FAILS` will contain the number of times the word "Failures" appears in `run-result.txt` regardless of capitalization. Our grader is pretty brutal (but not by design!), and uses a pass/fail system. If any error is found, it is an automatic fail. If the program runs correctly, the student passes.
+
+Obviously, there is a lot of room for improvement within this part of the grading script.
