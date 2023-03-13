@@ -9,7 +9,6 @@ For this lab report, we will be covering `grade.sh`, a simple bash script that t
 Here is the entirety of `grade.sh`. At the moment it is configured for a Windows machine, but it can be converted for Mac/Linux very easily.
 
 ```
-
 # CPATH='.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar' # uncomment this line and comment the line below if on Mac
 CPATH=".;lib/hamcrest-core-1.3.jar;lib/junit-4.13.2.jar"
 
@@ -101,5 +100,4 @@ then
 else
     echo "We found an error, so you fail!"
 fi
-
 ```
