@@ -117,3 +117,48 @@ Now, we will go more in depth on each section of the grading script, starting wi
 
 
 ## Part 1: Cloning and Checking for Correct Files
+
+```
+# CPATH='.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar' # uncomment this line and comment the line below if on Mac
+CPATH=".;lib/hamcrest-core-1.3.jar;lib/junit-4.13.2.jar"
+
+#--------------------------------------------------
+# PART 1: CLONING AND CHECKING FOR CORRECT FILES
+#--------------------------------------------------
+
+rm -rf student-submission
+git clone $1 student-submission
+echo 'Finished cloning'
+
+cd student-submission
+
+if [[ -f ListExamples.java ]]
+then
+    echo 'Correct file found'
+else
+    echo 'Need ListExamples.java'
+    exit
+fi
+```
+This part of the script is fairly simple. When running `grade.sh`, the student's github repository is passed in through the command line and is stored in `$1`. The script first clones this repo into a directory called `student-submission` and `cd`'s into it. It then checks to see if the correct file, in this case `ListExamples.java` is within `student-submission`. If `ListExamples.java` is not found, the program exits. If it is found, we move on to part 2.
+
+## Part 2: Setting up Files for Testing
+
+```
+#--------------------------------------------------
+# PART 2: SETTING UP FILES FOR TESTING
+#--------------------------------------------------
+
+cp ListExamples.java ..
+cd ..
+
+
+rm -rf testing-folder
+mkdir testing-folder
+
+cp TestListExamples.java testing-folder
+cp ListExamples.java testing-folder
+cp -r lib testing-folder
+
+echo 'Files ready for testing'
+```
