@@ -12,7 +12,9 @@ Here is the entirety of `grade.sh`. At the moment it is configured for a Windows
 # CPATH='.:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar' # uncomment this line and comment the line below if on Mac
 CPATH=".;lib/hamcrest-core-1.3.jar;lib/junit-4.13.2.jar"
 
+#--------------------------------------------------
 # PART 1: CLONING AND CHECKING FOR CORRECT FILES
+#--------------------------------------------------
 
 rm -rf student-submission
 git clone $1 student-submission
@@ -28,8 +30,9 @@ else
     exit
 fi
 
-
+#--------------------------------------------------
 # PART 2: SETTING UP FILES FOR TESTING
+#--------------------------------------------------
 
 cp ListExamples.java ..
 cd ..
@@ -44,7 +47,9 @@ cp -r lib testing-folder
 
 echo 'Files ready for testing'
 
+#--------------------------------------------------
 # PART 3: COMPILING STUDENT SUBMISSION
+#--------------------------------------------------
 
 rm -rf compile-result.txt
 
@@ -61,7 +66,9 @@ else
     exit
 fi
 
+#--------------------------------------------------
 # PART 4: RUNNING STUDENT SUBMISSION
+#--------------------------------------------------
 
 cd testing-folder
 
@@ -85,6 +92,10 @@ else
     exit
 fi
 
+#--------------------------------------------------
+# PART 5: GRADING STUDENT SUBMISSION
+#--------------------------------------------------
+
 rm -rf failures.txt 
 
 grep -c -i "FAILURES" run-result.txt > failures.txt
@@ -101,3 +112,8 @@ else
     echo "We found an error, so you fail!"
 fi
 ```
+
+Now, we will go more in depth on each section of the grading script, starting with part 1.
+
+
+## Part 1: Cloning and Checking for Correct Files
