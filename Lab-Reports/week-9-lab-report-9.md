@@ -256,10 +256,37 @@ Obviously, there is a lot of room for improvement within this part of the gradin
 
 We know that these lines only show up if one or more JUnit tests fails, so our idea was to somehow store the number of failures and the number of tests into two separate variables. We could then give a percentage grade with the following calculation:
 
-**( Total # of Tests - # of Failed Tests) / ( Total # of Tests)**
+**( Total # of Tests - # of Failed Tests ) / ( Total # of Tests )**
 
 This would definitely be a more fair grading scheme than our current pass/fail system, and would actually make it so implementing more tests within `TestListExamples.java` would be beneficial to the student instead of detrimental. Unfortunately, we were not able to come up with a working solution in time, but after looking into this on my own time it looks like command such as `awk` or `sed` could be used to achieve this goal.
 
 ## Examples of our Grading Script in Action
 
+### Test #1: Failing Grade Expected
 
+The following repo was used for this test: [https://github.com/ucsd-cse15l-f22/list-methods-lab3](https://github.com/ucsd-cse15l-f22/list-methods-lab3)
+
+#### Output
+![Image](https://i.imgur.com/hBKzLH9.png)
+
+
+### Test #2: Passing Grade Expected
+
+The following repo was used for this test: [https://github.com/ucsd-cse15l-f22/list-methods-corrected](https://github.com/ucsd-cse15l-f22/list-methods-corrected)
+
+#### Output
+![Image](https://i.imgur.com/tvGmw98.png)
+
+### Test #3: Compile Error Expected
+
+The following repo was used for this test: [https://github.com/ucsd-cse15l-f22/list-methods-compile-error](https://github.com/ucsd-cse15l-f22/list-methods-compile-error)
+
+#### Output
+![Image](https://i.imgur.com/S1vEZUy.png)
+
+### Test #4: Missing/Wrong File Expected 
+
+The following repo was used for this test: [https://github.com/ucsd-cse15l-f22/list-methods-filename](https://github.com/ucsd-cse15l-f22/list-methods-filename)
+
+#### Output
+![Image](https://i.imgur.com/vi9YBs2.png)
