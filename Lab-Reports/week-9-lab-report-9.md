@@ -256,7 +256,7 @@ Obviously, there is a lot of room for improvement within this part of the gradin
 
 We know that these lines only show up if one or more JUnit tests fails, so our idea was to somehow store the number of failures and the number of tests into two separate variables. We could then give a percentage grade with the following calculation:
 
-**( Total # of Tests - # of Failed Tests) / ( Total # of Tests)
+**( Total # of Tests - # of Failed Tests) / ( Total # of Tests)**
 
 This would definitely be a more fair grading scheme than our current pass/fail system, and would actually make it so implementing more tests within `TestListExamples.java` would be beneficial to the student instead of detrimental. Unfortunately, we were not able to come up with a working solution in time, but after looking into this on my own time it looks like command such as `awk` or `sed` could be used to achieve this goal.
 
