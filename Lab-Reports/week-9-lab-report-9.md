@@ -252,7 +252,7 @@ Now, in the final part of the script, we assign the student's submission a grade
 
 Obviously, there is a lot of room for improvement within this part of the grading script. One idea we had was to use `grep` to try and isolate the following lines from `run-result.txt`. 
 
-[!Image](https://i.imgur.com/6aOv0Jz.png)
+![Image](https://i.imgur.com/6aOv0Jz.png)
 
 We know that these lines only show up if one or more JUnit tests fails, so our idea was to somehow store the number of failures and the number of tests into two separate variables. We could then give a percentage grade with the following calculation:
 
