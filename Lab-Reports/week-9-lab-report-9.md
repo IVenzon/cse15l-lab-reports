@@ -248,4 +248,12 @@ fi
 
 Now, in the final part of the script, we assign the student's submission a grade based on the results of the JUnit tests. We first use `grep` in combination with the `-i` and `-c` options to find any and all instances of the word "FAILURES" within `run-result.txt` and store it in a variable called `FAILS`. `FAILS` will contain the number of times the word "Failures" appears in `run-result.txt` regardless of capitalization. Our grader is pretty brutal (but not by design!), and uses a pass/fail system. If any error is found, it is an automatic fail. If the program runs correctly, the student passes.
 
-Obviously, there is a lot of room for improvement within this part of the grading script.
+Obviously, there is a lot of room for improvement within this part of the grading script. One idea we had was to use `grep` to try and isolate the following lines from `run-result.txt`. 
+
+[!Image](https://i.imgur.com/6aOv0Jz.png)
+
+We know that these lines only show up if one or more JUnit tests fails, so our idea was to somehow store the number of failures and the number of tests into two separate variables. We could then give a percentage grade with the following calculation:
+
+**( Total # of Tests - # of Failed Tests) / ( Total # of Tests)
+
+This would definitely be a more fair grading scheme than our current pass/fail system, and would actually make it so implementing more tests within `TestListExamples.java` would be beneficial to the student instead of detrimental. Unfortunately, we were not able to come up with a working solution in time, but after looking into this on my own time it looks like command such as `awk` or `sed` could be used to achieve this goal.
